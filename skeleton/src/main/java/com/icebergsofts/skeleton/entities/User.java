@@ -1,5 +1,7 @@
 package com.icebergsofts.skeleton.entities;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -8,9 +10,13 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="dodo")
-public class User {
+public class User implements Serializable{
 
-	private int id;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1301301590798603211L;
+	private Integer id;
 	private String name;
 	private String surname;
 	
@@ -21,7 +27,7 @@ public class User {
 	 */
 	@Id
 	@Column(name="id", unique = true, nullable = false)
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 	
@@ -30,7 +36,7 @@ public class User {
 	 * 
 	 * @param int - User Id
 	 */
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	

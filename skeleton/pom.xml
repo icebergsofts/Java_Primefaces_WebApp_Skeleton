@@ -5,27 +5,49 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.icebergsofts</groupId>
 	<artifactId>skeleton</artifactId>
-	<packaging>war</packaging>
 	<version>999.99-SNAPSHOT</version>
-	<url>http://www.icebergsofts.com</url>
+	
+	<packaging>war</packaging>
+	
+	<name>Skeleton for Java Primefaces Application</name>
+	<description>This is a Java Primefaces Web Application Skeleton. It facilitate the beginning of a new project.
 
+This project use Java 7, Tomcat 7, Spring, Primefaces, Hibernate, Maven, JPA and PostgreSQL...</description>
+	<organization>
+		<name>Icebergsofts Softwares</name>
+		<url>http://www.icebergsofts.com</url>
+	</organization>
 
 	<repositories>
+		<!-- Repository of Primefaces -->
 		<repository>
 			<id>prime-repo</id>
 			<name>PrimeFaces Maven Repository</name>
 			<url>http://repository.primefaces.org</url>
 			<layout>default</layout>
 		</repository>
+
+		<!-- Repository of the Spring Framework -->
+		<repository>
+			<id>springsource-repo</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.springsource.org/release</url>
+		</repository>
 	</repositories>
 
+	<!-- We set some variables for versions of the apps -->
 	<properties>
-		<spring.version>3.1.1.RELEASE</spring.version>
+		<spring.version>3.2.2.RELEASE</spring.version>
+		<primefaces.version>3.5</primefaces.version>
+		<jsf.version>2.2.0-m11</jsf.version>
+		<hibernate.version>4.2.0.CR2</hibernate.version>
 	</properties>
 
 	<dependencies>
 
-		<!-- Spring 3 dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
+		<!-- // Spring Dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -62,17 +84,19 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-		<!-- JSF library -->
+		<!-- //////////////////////////////////////////////////////////// -->
+		<!-- // JSF Dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.1.6</version>
+			<version>${jsf.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>2.1.6</version>
+			<version>${jsf.version}</version>
 		</dependency>
 
 		<dependency>
@@ -81,18 +105,22 @@
 			<version>1.2</version>
 		</dependency>
 
-		<!-- Primefaces library -->
+		<!-- //////////////////////////////////////////////////////////// -->
+		<!-- // Primefaces Dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>3.1.1</version>
+			<version>${primefaces.version}</version>
 		</dependency>
 
-		<!-- Hibernate library -->
+		<!-- //////////////////////////////////////////////////////////// -->
+		<!-- // Hibernate Dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.6.1.Final</version>
+			<version>${hibernate.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>xml-apis</groupId>
@@ -100,26 +128,35 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-
+		
 		<dependency>
-			<groupId>javassist</groupId>
-			<artifactId>javassist</artifactId>
-			<version>3.12.1.GA</version>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
 		</dependency>
 
-		<!-- PostgreSQL Driver -->
+		<!-- //////////////////////////////////////////////////////////// -->
+		<!-- // Database Related Dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
+
+		<!-- PostgreSQL Database Driver -->
 		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901.jdbc4</version>
 		</dependency>
 
-
+		<!-- C3P0 Datasource / Resource Pooling -->
 		<dependency>
 			<groupId>c3p0</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>0.9.1.2</version>
 		</dependency>
+
+
+		<!-- //////////////////////////////////////////////////////////// -->
+		<!-- // Logging and Testing Dependencies -->
+		<!-- //////////////////////////////////////////////////////////// -->
 
 		<!-- Log4j library -->
 		<dependency>
@@ -167,12 +204,5 @@
 		</plugins>
 	</build>
 
-	<name>Skeleton for Java Primefaces Application</name>
-	<description>This is a Java Primefaces Web Application Skeleton. It facilitate the beginning of a new project.
 
-This project use Java 7, Tomcat 7, Spring, Primefaces, Hibernate, Maven, JPA and PostgreSQL...</description>
-	<organization>
-		<name>Icebergsofts Softwares</name>
-		<url>http://www.icebergsofts.com</url>
-	</organization>
 </project>

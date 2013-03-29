@@ -36,7 +36,7 @@
 	  
 	  <!-- Welcome Page -->
 	  <welcome-file-list>
-	    <welcome-file>/pages/index.xhtml</welcome-file>
+	    <welcome-file>/pages/index.jsf</welcome-file>
 	  </welcome-file-list>
 	  
 	  <!-- JSF Servlet is defined to container -->
