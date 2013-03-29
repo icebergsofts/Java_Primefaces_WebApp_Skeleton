@@ -10,7 +10,6 @@
 
 		<jta-data-source>java:/DefaultDS</jta-data-source>
 		<properties>
-			<!-- property name="hibernate.ejb.naming_strategy" value="com.mediagrif.commons.persistence.util.UpperCaseNamingStrategy" / -->
 			<property name="jboss.entity.manager.jndi.name " value="java:/defaultPU" />
 			<property name="hibernate.default_schema" value="public"/>
 		</properties>
